@@ -102,9 +102,10 @@ def bytes_to_img(img_bytes: bytes):
 
 def img_predict_letters(model, img):
     letters = letters_extract(img)
-    chrs = predict_imgs(model, [let[4] for let in letters])
-    for i in range(len(letters)):
-        letters[i] = (*letters[i][:4], chrs[i])
+    if letters:
+        chrs = predict_imgs(model, [let[4] for let in letters])
+        for i in range(len(letters)):
+            letters[i] = (*letters[i][:4], chrs[i])
     return letters
 
 

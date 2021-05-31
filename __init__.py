@@ -19,5 +19,4 @@ model = keras.models.load_model(os.path.join(os.path.dirname(__file__), "text_wr
 
 
 def bytes_predict_letters(img_bytes: bytes):
-    img = bytes_to_img(img_bytes)
-    return img_predict_letters(model, img)
+    return img_predict_letters(model, bytes_to_img(img_bytes))
