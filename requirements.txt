@@ -1,0 +1,5 @@
+numpy>=1.15.0
+tensorflow~=2.5.0
+#tensorflow-cpu~=2.5.0
+keras~=2.4.3
+opencv-python~=4.5.2.52
